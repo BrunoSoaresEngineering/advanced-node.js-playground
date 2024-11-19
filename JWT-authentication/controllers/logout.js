@@ -26,7 +26,11 @@ async function handleLogout(req, res) {
     );
   }
 
-  res.clearCookie('jwt', { httpOnly: true , sameSite: 'none', secure: true });
+  res.clearCookie('jwt', {
+    httpOnly: true,
+    sameSite: 'none',
+    // secure: true
+  });
   res.sendStatus(204);
 }
 

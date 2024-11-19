@@ -7,6 +7,7 @@ function handleRefreshToken(req, res) {
   const cookies = req.cookies;
 
   if (!cookies?.jwt) {
+    console.log(cookies)
     return res.sendStatus(401);
   }
 
